@@ -5,8 +5,8 @@ import Text from '../Text/Text'
 import styles from './HomePage.module.css'
 export const HomePage = () => {
     return (
-        <div className="h-full">
-            <div className='justify-self-center flex flex-col gap-10'>
+        <div className="h-full max-w-[1000px] self-center">
+            <div className='justify-self-center flex flex-col gap-10 '>
                 <div className='justify-self-center flex flex-col'>
                     <Text size='xl2' fontWeight='bold' className='self-center lg:self-start' >PROFILE SUMMARY</Text>
                     <ProfileSummary />

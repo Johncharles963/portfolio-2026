@@ -5,7 +5,7 @@ import { Footer } from '../Footer/Footer';
 
 export default function Layout() {
     return (
-        <div className={` min-h-screen min-w-screen bg-slate-50 flex flex-col gap-10 justify-between`}>
+        <div className={` min-h-screen w-full bg-slate-50 flex flex-col gap-10 justify-between`}>
             <NavBar />
             <Outlet />
             <Footer />
