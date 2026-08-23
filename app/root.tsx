@@ -1,5 +1,6 @@
 import {
   isRouteErrorResponse,
+  Link,
   Links,
   Meta,
   Outlet,
@@ -46,30 +47,49 @@ export default function App() {
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
-  let message = "Oops!";
-  let details = "An unexpected error occurred.";
-  let stack: string | undefined;
+  let statusCode = 500;
+  let title = "Something Went Wrong";
+  let message = "An unexpected error occurred on the server.";
 
+  // Check if it's a specific thrown router response (like a 404 or 500)
   if (isRouteErrorResponse(error)) {
-    message = error.status === 404 ? "404" : "Error";
-    details =
-      error.status === 404
-        ? "The requested page could not be found."
-        : error.statusText || details;
-  } else if (import.meta.env.DEV && error && error instanceof Error) {
-    details = error.message;
-    stack = error.stack;
+    statusCode = error.status;
+    title = error.status === 404 ? "Page Not Found" : "Server Error";
+    message = error.data || error.statusText;
+  } else if (error instanceof Error) {
+    message = error.message;
   }
 
   return (
-    <main className="pt-16 p-4 container mx-auto">
-      <h1>{message}</h1>
-      <p>{details}</p>
-      {stack && (
-        <pre className="w-full p-4 overflow-x-auto">
-          <code>{stack}</code>
-        </pre>
-      )}
-    </main>
+    <html lang="en">
+      <head>
+        <title>{statusCode} - {title}</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {/* Include your tailwind/styles links here */}
+      </head>
+      <body className="bg-slate-50 flex items-center justify-center min-h-screen">
+        <div className="max-w-md w-full p-8 bg-white border border-slate-200 rounded-2xl shadow-sm text-center">
+          
+          {/* Status Code Badge */}
+          <span className="inline-block px-3 py-1 mb-4 text-sm font-semibold text-red-600 bg-red-100 rounded-full">
+            Error {statusCode}
+          </span>
+
+          <h1 className="text-2xl font-bold text-slate-900 mb-2">{title}</h1>
+          <p className="text-slate-600 mb-6 text-sm">
+            {message}
+          </p>
+
+          <Link 
+            to="/" 
+            className="inline-block w-full py-2.5 px-4 bg-slate-900 text-white font-medium rounded-xl hover:bg-slate-800 transition-colors"
+          >
+            Return Home
+          </Link>
+
+        </div>
+      </body>
+    </html>
   );
 }
