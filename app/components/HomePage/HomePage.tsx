@@ -1,3 +1,4 @@
+import { Link } from 'react-router'
 import Card from '../Card/Card'
 import { ProfileSummary } from '../ProfileSummary/ProfileSummary'
 import { TechnicalSkills } from '../TechnicalSkills/TechnicalSkills'
@@ -15,9 +16,9 @@ export const HomePage = () => {
                 <Card className='flex flex-col'>
                     <Text size="lg" fontWeight="bold" className='text-center lg:text-start'>QUICK LINKS</Text>
                     <div className='flex max-sm:flex-col max-lg:items-center max-lg:justify-center gap-4'>
-                        <button className='btn-outlined'>About Me</button>
-                        <button className='btn-outlined'>Resume</button>
-                        <button className='btn-outlined'>Contact</button>
+                        <Link to="/about" className='btn-outlined text-center'>About Me</Link>
+                        <Link to="/resume" className='btn-outlined text-center'>Resume</Link>
+                        <Link to="/contact" className='btn-outlined text-center'>Contact</Link>
                     </div>
                 </Card>
 
