@@ -25,38 +25,111 @@ import Vue from "./icons/vue.svg"
 
 export const TechnicalSkills = () => {
     const technicalSkillsList = [
-        GCP,
-        JS,
-        Java,
-        Bitbucket,
-        Bootstrap,
-        cPlusPlus,
-        cSharp,
-        CSS,
-        Docker,
-        DotNet,
-        Flask,
-        Git,
-        HTML,
-        Mui,
-        NextJS,
-        Python,
-        React,
-        Sentry,
-        Tailwind,
-        TS,
-        Unity,
-        Vue
+        {
+            img: Python,
+            title: "Python"
+        },
+        {
+            img: JS,
+            title: "JS"
+        },
+        {
+            img: TS,
+            title: "TS"
+        },
+        {
+            img: Java,
+            title: "Java"
+        },
+        {
+            img: cPlusPlus,
+            title: "C++"
+        },
+        {
+            img: cSharp,
+            title: "C#"
+        },
+        {
+            img: HTML,
+            title: "HTML"
+        },
+        {
+            img: CSS,
+            title: "CSS"
+        },
+        {
+            img: DotNet,
+            title: ".NET"
+        },
+
+        {
+            img: Git,
+            title: "Git"
+        },
+
+
+        {
+            img: React,
+            title: "React"
+        },
+        {
+            img: NextJS,
+            title: "Nextjs"
+        },
+        {
+            img: Vue,
+            title: "Vue"
+        },
+        {
+            img: Flask,
+            title: "Flask"
+        },
+        {
+            img: Unity,
+            title: "Unity"
+        },
+
+        {
+            img: Bootstrap,
+            title: "Bootstrap"
+        },
+        {
+            img: Mui,
+            title: "Mui"
+        },
+        {
+            img: Tailwind,
+            title: "Tailwind"
+        },
+        {
+            img: Sentry,
+            title: "Senty"
+        },
+        {
+            img: Docker,
+            title: "Docker"
+        },
+        {
+            img: GCP,
+            title: "GCP"
+        },
+        {
+            img: Bitbucket,
+            title: "Bitbucket"
+        },
     ]
-    return(
+    return (
         <Card className="flex flex-col max-md:max-h-[200px] max-md:overflow-auto">
             <Text size="lg" fontWeight="bold" className='text-center lg:text-start' >TECHNICAL SKILLS</Text>
             <div className="flex flex-wrap justify-center md:justify-start gap-3">
                 {technicalSkillsList.map((skill, index) => (
-                    <img key={`tech-skill-${index}`} src={skill} className="w-15 h-15" />
+                    <div className="flex flex-col items-center" key={`tech-skill-${index}`}>
+                        <img src={skill.img} className="w-15 h-15" />
+                        <Text size="sm">{skill.title}</Text>
+                    </div>
                 ))}
             </div>
-           
+
         </Card>
     )
 }
