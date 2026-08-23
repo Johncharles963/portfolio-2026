@@ -67,7 +67,7 @@ export const ContactPage = () => {
     }
 
     return (
-        <div className="justify-self-center max-w-[700px] w-full">
+        <div className="justify-self-center max-w-[700px] w-full p-5">
             <Text size="xl2" fontWeight="bold" className="mb-5">CONTACT</Text>
             <Card className="w-full border-2" borderColor="border-emerald-300">
                 <form ref={formRef} onSubmit={handleSubmit} className="w-full flex flex-col gap-5">
