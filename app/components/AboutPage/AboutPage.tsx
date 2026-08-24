@@ -20,8 +20,8 @@ export const AboutPage = () => {
             </Card>
             <Card className="animate-slide-left [animation-delay:1s] mb-2 border-2 opacity-0" borderColor="border-blue-500">
                 <Text size="xl" fontWeight="bold" className="mb-2">The Eight-Month Sprint</Text>
-                <Text>Over the next eight months, I immersed myself completely, learning JavaScript, HTML, CSS, and Python. I built a full-stack Flask application and even engineered a system integrating DocuSign and OAuth 2.0 into another Flask app. When I started applying for roles, I received multiple job offers and accepted my position at Breezeline.</Text>
-                <br /><Text>The turning point happened right before the job: my technical test required React, GraphQL, and MUI, technologies I had never touched. I taught them to myself overnight and aced the test by morning.</Text>
+                <Text>Over the next eight months, I immersed myself completely, learning JavaScript, HTML, CSS, and Python. I built a full-stack Flask application and even engineered a system integrating DocuSign and OAuth 2.0 into another Flask app.</Text>
+                <br /><Text>The ultimate test came during my interview process with Breezeline: the technical round required React, GraphQL, and MUI, technologies I had never touched. I taught them to myself overnight, aced the interview by morning, and accepted the position while also fielding other offers. </Text>
 
             </Card>
             <Card className="animate-slide-right [animation-delay:1.5s] mb-2 border-2 opacity-0" borderColor="border-indigo-500">
@@ -29,8 +29,8 @@ export const AboutPage = () => {
                 <Text>That began a four-year run marked by rapid growth and execution:</Text>
                 <ul className="list-disc px-5">
                     <li><Text fontWeight="bold">Back-to-Back Promotions:</Text> <Text>Based on performance, I earned consecutive promotions in my first two years on the job.</Text></li>
-                    <li><Text fontWeight="bold">Rapid Impact & Leadership:</Text> <Text>Within a single year, I went from learning Git, Bitbucket, React, MUI, and team workflows to actively contributing to applications, refactoring code, and spearheading two major initiatives simultaneously: the outage map and an internal tool.</Text></li>
-                    <li><Text fontWeight="bold">Modernizing Architecture:</Text> <Text>On the job, I learned Vue while taking ownership of the main customer application, then subsequently learned Next.js and TypeScript on the job to help complete rebuild of that core application from the ground up.</Text></li>
+                    <li><Text fontWeight="bold">Rapid Impact & Leadership:</Text> <Text>Within a single year, I went from learning Git, Bitbucket, React, MUI, and team workflows to actively contributing to applications, refactoring code, and spearheading two major initiatives simultaneously: the outage map which displays outage information on an interactve map, and an outage tool that allows internal teams to report and track outages.</Text></li>
+                    <li><Text fontWeight="bold">Modernizing Architecture:</Text> <Text>On the job, I learned Vue while taking ownership of the main customer "MyAccount" application, then subsequently learned Next.js and TypeScript on the job to help complete rebuild of that core application from the ground up.</Text></li>
                 </ul>
             </Card>
             <Card className="animate-slide-left [animation-delay:2s] md:col-span-2 mb-2 border-2 opacity-0" borderColor="border-emerald-500">
