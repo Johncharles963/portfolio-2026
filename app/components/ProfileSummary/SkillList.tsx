@@ -8,7 +8,7 @@ export const SkillList = () => {
         },
         {
             title: 'Systems & Interactive Programming',
-            description: ': Builds diverse software ranging from Python dungeon loot simulators and C++ TCP/UDP client-server applications to C# Ping Pong, interactive JavaScript calendars, and Tic-Tac-Toe AI, while actively learning Unity to develop multiplayer RPG.',
+            description: ': Builds diverse software ranging from Python dungeon loot simulators and C++ TCP/UDP client-server applications to C# Ping Pong, interactive JavaScript calendars, and Tic-Tac-Toe AI, while actively learning Unity to develop a multiplayer RPG.',
         },
         {
             title: 'Methodical Problem Solver',
