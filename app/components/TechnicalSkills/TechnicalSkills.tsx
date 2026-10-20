@@ -103,7 +103,7 @@ export const TechnicalSkills = () => {
         },
         {
             img: Sentry,
-            title: "Senty"
+            title: "Sentry"
         },
         {
             img: Docker,
@@ -119,17 +119,19 @@ export const TechnicalSkills = () => {
         },
     ]
     return (
-        <Card className="flex flex-col max-md:max-h-[200px] max-md:overflow-auto">
-            <Text size="lg" fontWeight="bold" className='text-center lg:text-start' >TECHNICAL SKILLS</Text>
-            <div className="flex flex-wrap justify-center md:justify-start gap-3">
-                {technicalSkillsList.map((skill, index) => (
-                    <div className="flex flex-col items-center" key={`tech-skill-${index}`}>
-                        <img src={skill.img} className="w-15 h-15" />
-                        <Text size="sm">{skill.title}</Text>
-                    </div>
-                ))}
-            </div>
+        <section aria-labelledby="technical-skills-heading">
+            <Card className="flex flex-col">
+                <Text as="h2" id="technical-skills-heading" size="lg" fontWeight="bold" className='text-center lg:text-start' >TECHNICAL SKILLS</Text>
+                <ul className="flex flex-wrap justify-center md:justify-start gap-3">
+                    {technicalSkillsList.map((skill) => (
+                        <li className="flex flex-col items-center" key={skill.title}>
+                            <img src={skill.img} alt="" aria-hidden="true" className="w-15 h-15" />
+                            <Text size="sm">{skill.title}</Text>
+                        </li>
+                    ))}
+                </ul>
 
-        </Card>
+            </Card>
+        </section>
     )
 }

@@ -1,11 +1,14 @@
 type TextSize = 'sm' | 'md' | 'lg' | 'xl' | 'xl2'
 type BoldSize = 'normal' | 'medium' |'semi' | 'bold' | 'bolder'
+type TextElement = 'p' | 'h1' | 'h2' | 'h3'
 
 interface TextProps {
     size?: TextSize
     children: React.ReactNode
     className?: string
     fontWeight?: BoldSize
+    as?: TextElement
+    id?: string
 }
 
 
@@ -24,8 +27,8 @@ const boldClasses: Record<BoldSize, string> = {
     bolder: 'font-extrabold',
 }
 
-export default function Text({size= 'md', children, className = '', fontWeight= "normal"}: TextProps){
+export default function Text({size= 'md', children, className = '', fontWeight= "normal", as: Element = 'p', id}: TextProps){
     return(
-        <p className={`${sizeClasses[size]} ${boldClasses[fontWeight]} ${className}`}>{children}</p>
+        <Element id={id} className={`${sizeClasses[size]} ${boldClasses[fontWeight]} ${className}`}>{children}</Element>
     )
 }
