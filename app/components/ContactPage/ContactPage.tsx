@@ -67,9 +67,9 @@ export const ContactPage = () => {
     }
 
     return (
-        <div className="justify-self-center max-w-[700px] w-full p-5">
-            <Text as="h1" size="xl2" fontWeight="bold" className="mb-5">CONTACT</Text>
-            <Card className="w-full border-2" borderColor="border-emerald-300">
+        <div className="mx-auto w-full max-w-[700px] px-5 py-10 sm:py-14">
+            <Text as="h1" size="xl2" fontWeight="bold" className="mb-5 tracking-tight text-slate-900">LET'S CONNECT</Text>
+            <Card className="w-full" borderColor="border-slate-200">
                 <form ref={formRef} onSubmit={handleSubmit} className="w-full flex flex-col gap-5">
                     
                     {statusMessage && (

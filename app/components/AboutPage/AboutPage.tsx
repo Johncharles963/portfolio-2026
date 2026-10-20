@@ -5,10 +5,11 @@ import PlumbingPic from "./plumber.jpg"
 export const AboutPage = () => {
     return (
         <div className="mx-auto px-5 gap-5 flex flex-col max-w-[1500px]">
+            <Text as="h1" size="xl2" fontWeight="bold" className="tracking-tight text-center text-slate-900 mt-2">ABOUT ME</Text>
             <div className=" w-full max-w-[500px]  self-center">
                 <img src={PlumbingPic} alt="John Charles during his plumbing career" className="h-full w-full rounded-xl" />
             </div>
-            <Text as="h1" size="xl2" fontWeight="bold">FROM PIPE WRENCH TO PULL REQUEST</Text>
+            <Text as="h2" size="xl2" fontWeight="bold">FROM PIPE WRENCH TO PULL REQUEST</Text>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Card className="animate-slide-left mb-2 border-2 opacity-0" borderColor="border-slate-300">
                 <Text as="h2" size="xl" fontWeight="bold" className="mb-2">The Spark</Text>

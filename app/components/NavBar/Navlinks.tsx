@@ -7,7 +7,13 @@ export const Navlinks = () => {
             <ul className="flex justify-between gap-2 sm:gap-5">
                 {links.map((link) => (
                     <li key={link.text}>
-                        <NavLink to={link.url} end={link.url === "/"} className="btn">{link.text}</NavLink>
+                        <NavLink
+                            to={link.url}
+                            end={link.url === "/"}
+                            className={({ isActive }) => `btn ${isActive ? "bg-white/10 text-white" : ""}`}
+                        >
+                            {link.text}
+                        </NavLink>
                     </li>
                 ))}
             </ul>

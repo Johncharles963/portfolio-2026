@@ -3,6 +3,8 @@
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-ink: #172033;
+  --color-accent: #2563eb;
   --animate-slide-left: slideLeft 0.6s ease-out forwards;
   --animate-slide-right: slideRight 0.6s ease-out forwards;
 
@@ -17,50 +19,39 @@
   }
 }
 @utility btn {
-  cursor: pointer;
-  @apply p-2 rounded-sm h-10;
-
-  &:focus {
-    @apply bg-blue-600;
-  }
-
-  &:hover {
-    @apply bg-blue-500;
-  }
-
+  @apply inline-flex min-h-10 items-center justify-center rounded-full px-4 py-2 text-sm font-medium text-slate-200 transition-colors duration-200 hover:bg-white/10 hover:text-white;
 }
 @utility btn-outlined {
-  cursor: pointer;
-  @apply p-2 rounded-full h-10 w-40 bg-blue-600 text-white;
-
-  &:focus {
-    @apply bg-blue-400;
-  }
-
-  &:hover {
-    @apply bg-blue-400 border-blue-900 border-2;
-  }
-
+  @apply inline-flex min-h-12 w-44 items-center justify-center rounded-xl bg-blue-600 px-5 py-3 font-semibold text-white shadow-md shadow-blue-900/10 transition duration-200 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-lg focus-visible:outline-blue-700;
 }
 html,
 body {
-  @apply text-slate-700;
-  input, textarea{
-    @apply border rounded-sm border-2 border-slate-300 w-full; 
-  }
-  /* @apply bg-white dark:bg-gray-950;
+  @apply min-h-full text-slate-700 antialiased;
+  background:
+    radial-gradient(ellipse at 10% 0%, rgb(219 234 254 / 55%), transparent 34rem),
+    radial-gradient(ellipse at 100% 40%, rgb(224 231 255 / 45%), transparent 30rem),
+    #f8fafc;
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  } */
+  input, textarea{
+    @apply w-full rounded-xl border border-slate-300 bg-white px-4 py-3 transition-colors placeholder:text-slate-400 focus:border-blue-500;
+  }
 }
 
 :focus-visible {
-  outline: 3px solid #1d4ed8;
+  outline: 3px solid #2563eb;
   outline-offset: 3px;
 }
 
 @media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
   .animate-slide-left,
   .animate-slide-right {
     animation: none;

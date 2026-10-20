@@ -121,12 +121,12 @@ export const TechnicalSkills = () => {
     return (
         <section aria-labelledby="technical-skills-heading">
             <Card className="flex flex-col">
-                <Text as="h2" id="technical-skills-heading" size="lg" fontWeight="bold" className='text-center lg:text-start' >TECHNICAL SKILLS</Text>
-                <ul className="flex flex-wrap justify-center md:justify-start gap-3">
+                <Text as="h2" id="technical-skills-heading" size="lg" fontWeight="bold" className='text-center tracking-tight text-slate-900 lg:text-start' >TECHNICAL SKILLS</Text>
+                <ul className="flex flex-wrap justify-center gap-4 sm:gap-5 md:justify-start">
                     {technicalSkillsList.map((skill) => (
-                        <li className="flex flex-col items-center" key={skill.title}>
-                            <img src={skill.img} alt="" aria-hidden="true" className="w-15 h-15" />
-                            <Text size="sm">{skill.title}</Text>
+                        <li className="flex min-w-16 flex-col items-center gap-1 rounded-xl px-2 py-3 transition-colors hover:bg-slate-50" key={skill.title}>
+                            <img src={skill.img} alt="" aria-hidden="true" className="h-12 w-12 object-contain sm:h-14 sm:w-14" />
+                            <Text size="sm" className="text-slate-600">{skill.title}</Text>
                         </li>
                     ))}
                 </ul>

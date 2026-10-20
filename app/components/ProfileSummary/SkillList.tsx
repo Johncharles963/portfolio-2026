@@ -16,7 +16,7 @@ export const SkillList = () => {
         },
     ]
     return (
-        <div className="px-5 self-start">
+        <div className="w-full self-stretch px-5 text-left">
             <ul className="list-disc">
                 {
                 skills.map((skill) => (
