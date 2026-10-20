@@ -74,7 +74,9 @@ export const ResumePage = () => {
 
                     <Text as="h3" fontWeight="semi">Self-Taught Engineering & Full-Stack Development</Text>
                     <Text>Successfully pivoted from a technical trade to professional software engineering through an intensive, self-directed
-                        curriculum, building functional full-stack web applications before securing a professional role within 8 months.
+                        curriculum, building functional full-stack web applications before securing a professional role within 8 months. Since then, I have been studying part-time while maintaining full-time software engineering work to further formal computer science
+                        education following two years of professional development experience.
+
                     </Text>
                 </Card>
             </section>
