@@ -1,90 +1,53 @@
-# Welcome to React Router!
+# John Charles — Portfolio
 
-A modern, production-ready template for building full-stack React applications using React Router.
+A personal portfolio and resume site for showcasing my software engineering experience, technical skills, background, and contact information. Built with React, TypeScript, React Router, and Tailwind CSS.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## Pages
 
-## Features
+- `/` — Profile summary, technical skills, and quick links
+- `/about` — My path from plumbing to software engineering
+- `/resume` — Professional experience, skills, and education
+- `/contact` — Contact form and direct contact links
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+## Requirements
 
-## Getting Started
+- Node.js 24
+- npm
 
-### Installation
+## Getting started
 
-Install the dependencies:
+Install dependencies and start the development server:
 
 ```bash
-npm install
-```
-
-### Development
-
-Start the development server with HMR:
-
-```bash
+npm ci
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+Open the local URL printed by Vite (usually <http://localhost:5173>).
 
-## Building for Production
+## Contact form configuration
 
-Create a production build:
+The contact form uses EmailJS. Create a `.env` file in the project root with the values from your EmailJS account:
+
+```dotenv
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+```
+
+These `VITE_` values are included in the client-side bundle, so they are not secrets. Use the EmailJS public key and configure allowed origins and template settings in EmailJS. Do not put private credentials in these variables. For production, set the same variables in the deployment platform's build environment before building the app.
+
+## Checks and production build
 
 ```bash
+npm test
+npm run typecheck
 npm run build
+npm run start
 ```
+
+`npm run start` serves the production build from `build/`. GitHub Actions runs the tests, typecheck, and build on pushes and pull requests.
 
 ## Deployment
 
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
-
-# portfolio-2026
-Portfolio site for 2026 job search
+Deploy the output of `npm run build` to a Node.js hosting platform and run `npm run start`. Use Node.js 24 and make sure the EmailJS `VITE_` variables are available during the build. A Dockerfile is also included; its build process should be configured to provide those values when building the client bundle.
