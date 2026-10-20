@@ -8,11 +8,11 @@ export const ResumePage = () => {
             <Text size="xl2" fontWeight="bold">RESUME</Text>
             <Card>
                 <Text size="xl" fontWeight="bold" className="mb-2">Professional Summary</Text>
-                <Text>Extremely passionate and tenacious Software Engineer with a unique background transitioning from the plumbing
-                    trade to professional software engineering. Leverages a strong work ethic and problem-solving foundation to architect,
-                    build, scale, and modernize high-traffic applications. Proven track record of rapid promotion and mastering new tech
-                    stacks on the job, including React, Next.js, and TypeScript, while leveraging AI tooling and Google AI chatbots to
-                    optimize development workflows and user experiences.
+                <Text>Pragmatic, tenacious Software Engineer with 4+ years of experience building, scaling, and modernizing customerfacing applications and internal enterprise tools. Built on a strong foundation from the plumbing trade, I bring a gritdriven approach to diagnosing complex root causes and engineering resilient solutions. At Breezeline, I managed a
+                    portfolio of nine web applications, integrated Google AI capabilities, and streamlined development using AI-assisted
+                    tooling. Known for quick execution and continuous learning: earning back-to-back performance recognition, mastering
+                    tools on the fly, and maintaining a 4.0 GPA in Computer Science alongside full-time engineering work.
+
                 </Text>
             </Card>
             <TechnicalSkills />
@@ -21,26 +21,44 @@ export const ResumePage = () => {
                 <Text fontWeight="semi">Web Developer | Breezeline, Quincy, MA</Text>
                 <Text className="text-slate-500">November 22 - August 26</Text>
                 <ul className="list-disc p-4">
-                    <li><Text>Earned a performance-based promotion after consistently exceeding expectations for the first two consecutive
-                        years, rapidly mastering React, GraphQL, and MUI on the job to independently refactor legacy repositories,
-                        connect frontends to GraphQL APIs, and style UI components based on Figma designs.
+                    <li><Text>Led frontend modernization initiatives by refactoring legacy repositories, integrating GraphQL APIs, and
+                        building responsive UI components from Figma specifications, improving application scalability, maintainability,
+                        and overall user experience.
+
                     </Text></li>
-                    <li><Text>Spearheaded a dual-purpose project featuring a customer-facing Leaflet outage map and a heavily revamped
-                        internal dashboard enabling staff to declare, search, sort, and filter system-wide outages.</Text></li>
-                    <li><Text>Owned end-to-end development of critical customer identity and account management tools, maintaining a portfolio
-                        of at least six customer-facing applications and two internal tools simultaneously.
+                    <li><Text>Spearheaded the development of an interactive, customer-facing Leaflet outage mapping solution and redesigned an
+                        internal outage management dashboard, enabling real-time outage visibility and significantly improving operational
+                        efficiency for network operations teams declaring, tracking, and resolving system-wide outages.
                     </Text></li>
-                    <li><Text>Contributed to the development of the primary customer-facing "MyAccount" portal built from the ground up in
-                        Next.js/TypeScript, building scalable features like a dynamic marketing promotional carousel.
+                    <li><Text>Managed the end-to-end development and support of critical customer identity and account management solutions,
+                        overseeing a portfolio of seven customer-facing applications and two internal tools to ensure reliable performance,
+                        seamless user experiences, and operational continuity.
+
                     </Text></li>
-                    <li><Text>Integrated Google AI chatbot technology into several customer-facing applications to enhance automated support
-                        and user interaction capabilities.
+                    <li><Text>Collaborated on the strategic architectural rebuild of the core customer MyAccount portal transitioning to Next.js
+                        while adhering to strict engineering standards, resulting in accelerated page load times and a modern, modular
+                        codebase.
+
                     </Text></li>
-                    <li><Text>Dramatically reduced Sentry error volume from tens of thousands down to just hundreds per month and optimized
-                        application performance by completely restructuring error-handling and API call architecture, eliminating cascading
-                        failure states during high-traffic outages.</Text></li>
-                    <li><Text>Leveraged AI-driven developer tooling and coding assistants to accelerate PR reviews, streamline code refactoring,
-                        and automate routine development tasks, driving daily workflow efficiency.</Text></li>
+                    <li><Text>Engineered and integrated self-service authentication features including Google Single Sign-On (SSO) and secondary
+                        user management within a customer facing web application which streamlined subscriber onboarding and reduced
+                        support ticket volume for credential recovery.
+
+                    </Text></li>
+                    <li><Text>Drove production error monitoring and triage using Sentry across legacy and modern web applications, identifying
+                        root causes to systematically resolve critical runtime bugs and eliminate thousands of recurring production errors.
+                    </Text></li>
+                    <li><Text>Rapidly assumed technical ownership of third-party legacy codebases executing targeted feature updates and
+                        conducting knowledge transfer to preserve uptime during system transitions.
+                    </Text></li>
+                    <li><Text> Embedded Google AI conversational capabilities into key customer-facing platforms to streamline automated
+                        subscriber support, reduce resolution times, and elevate the overall user experience.
+
+                    </Text></li>
+                    <li><Text> Leveraged AI-driven development tooling and coding assistants to streamline pull request reviews, accelerate complex
+                        code refactoring, and automate repetitive tasks, resulting in significantly faster development cycles and improved daily
+                        workflow efficiency.
+                    </Text></li>
                 </ul>
             </Card>
             <Card>
