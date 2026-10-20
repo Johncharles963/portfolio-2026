@@ -51,13 +51,13 @@ export const ContactPage = () => {
             const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
             const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 
-            console.log("Sending email with EmailJS:", { SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY });
-
-            if (formRef.current) {
-                await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY);
-                setStatusMessage({ type: 'success', text: 'Thank you! Your message has been sent successfully.' });
-                formRef.current.reset();
+            if (!formRef.current) {
+                throw new Error("Contact form is unavailable.");
             }
+
+            await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY);
+            setStatusMessage({ type: 'success', text: 'Thank you! Your message has been sent successfully.' });
+            formRef.current.reset();
         } catch (error) {
             console.error("EmailJS Error:", error);
             setStatusMessage({ type: 'error', text: 'Failed to send message. Please try again later or email me directly.' });
@@ -68,41 +68,51 @@ export const ContactPage = () => {
 
     return (
         <div className="justify-self-center max-w-[700px] w-full p-5">
-            <Text size="xl2" fontWeight="bold" className="mb-5">CONTACT</Text>
+            <Text as="h1" size="xl2" fontWeight="bold" className="mb-5">CONTACT</Text>
             <Card className="w-full border-2" borderColor="border-emerald-300">
                 <form ref={formRef} onSubmit={handleSubmit} className="w-full flex flex-col gap-5">
                     
                     {statusMessage && (
-                        <div className={`p-3 rounded-lg text-sm ${statusMessage.type === 'error' ? 'bg-red-100 text-red-700' : 'bg-emerald-100 text-emerald-700'}`}>
+                        <div
+                            role={statusMessage.type === 'error' ? 'alert' : 'status'}
+                            aria-live={statusMessage.type === 'error' ? 'assertive' : 'polite'}
+                            aria-atomic="true"
+                            className={`p-3 rounded-lg text-sm ${statusMessage.type === 'error' ? 'bg-red-100 text-red-700' : 'bg-emerald-100 text-emerald-700'}`}
+                        >
                             {statusMessage.text}
                         </div>
                     )}
 
                     <div>
-                        <Text className="mb-1" size="xl" fontWeight="medium">Your Name</Text>
+                        <label htmlFor="contact-name" className="mb-1 block text-xl font-medium">Your Name</label>
                         <input 
+                            id="contact-name"
                             required 
                             name="name" 
                             type="text" 
+                            autoComplete="name"
                             placeholder="Enter your name" 
                             maxLength={100}
                             className="w-full p-2 border border-slate-300 rounded-md"
                         />
                     </div>
                     <div>
-                        <Text className="mb-1" size="xl" fontWeight="medium">Email Address</Text>
+                        <label htmlFor="contact-email" className="mb-1 block text-xl font-medium">Email Address</label>
                         <input 
+                            id="contact-email"
                             required 
                             name="email" 
                             type="email" 
+                            autoComplete="email"
                             placeholder="Enter your email" 
                             maxLength={254}
                             className="w-full p-2 border border-slate-300 rounded-md"
                         />
                     </div>
                     <div>
-                        <Text className="mb-1" size="xl" fontWeight="medium">Message</Text>
+                        <label htmlFor="contact-message" className="mb-1 block text-xl font-medium">Message</label>
                         <textarea 
+                            id="contact-message"
                             required 
                             name="message" 
                             placeholder="Enter your message" 
