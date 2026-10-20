@@ -29,8 +29,8 @@ export const AboutPage = () => {
                 <Text>That began a four-year run marked by rapid growth and execution:</Text>
                 <ul className="list-disc px-5">
                     <li><Text fontWeight="bold">Back-to-Back Promotions:</Text> <Text>Based on performance, I earned consecutive promotions in my first two years on the job.</Text></li>
-                    <li><Text fontWeight="bold">Rapid Impact & Leadership:</Text> <Text>Within a single year, I went from learning Git, Bitbucket, React, MUI, and team workflows to actively contributing to applications, refactoring code, and spearheading two major initiatives simultaneously: the outage map which displays outage information on an interactve map, and an outage tool that allows internal teams to report and track outages.</Text></li>
-                    <li><Text fontWeight="bold">Modernizing Architecture:</Text> <Text>On the job, I learned Vue while taking ownership of the main customer "MyAccount" application, then subsequently learned Next.js and TypeScript on the job to help complete rebuild of that core application from the ground up.</Text></li>
+                    <li><Text fontWeight="bold">Rapid Impact & Leadership:</Text> <Text>Within a single year, I went from learning Git, Bitbucket, React, MUI, and team workflows to actively contributing to applications, refactoring code, and spearheading two major initiatives simultaneously: the outage map which displays outage information on an interactive map, and an outage tool that allows internal teams to report and track outages.</Text></li>
+                    <li><Text fontWeight="bold">Modernizing Architecture:</Text> <Text>On the job, I learned Vue while taking ownership of the main customer "MyAccount" application, then subsequently learned Next.js and TypeScript on the job to help complete the rebuild of that core application from the ground up.</Text></li>
                 </ul>
             </Card>
             <Card className="animate-slide-left [animation-delay:2s] md:col-span-2 mb-2 border-2 opacity-0" borderColor="border-emerald-500">

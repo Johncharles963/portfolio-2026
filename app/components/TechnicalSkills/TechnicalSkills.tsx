@@ -74,7 +74,7 @@ export const TechnicalSkills = () => {
         },
         {
             img: NextJS,
-            title: "Nextjs"
+            title: "Next.js"
         },
         {
             img: Vue,
@@ -95,7 +95,7 @@ export const TechnicalSkills = () => {
         },
         {
             img: Mui,
-            title: "Mui"
+            title: "MUI"
         },
         {
             img: Tailwind,

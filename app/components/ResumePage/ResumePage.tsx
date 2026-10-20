@@ -9,7 +9,7 @@ export const ResumePage = () => {
             <section aria-labelledby="professional-summary-heading">
                 <Card>
                     <Text as="h2" id="professional-summary-heading" size="xl" fontWeight="bold" className="mb-2">Professional Summary</Text>
-                    <Text>Pragmatic, tenacious Software Engineer with 4+ years of experience building, scaling, and modernizing customerfacing applications and internal enterprise tools. Built on a strong foundation from the plumbing trade, I bring a gritdriven approach to diagnosing complex root causes and engineering resilient solutions. At Breezeline, I managed a
+                    <Text>Pragmatic, tenacious Software Engineer with 4+ years of experience building, scaling, and modernizing customer-facing applications and internal enterprise tools. Built on a strong foundation from the plumbing trade, I bring a grit-driven approach to diagnosing complex root causes and engineering resilient solutions. At Breezeline, I managed a
                         portfolio of nine web applications, integrated Google AI capabilities, and streamlined development using AI-assisted
                         tooling. Known for quick execution and continuous learning: earning back-to-back performance recognition, mastering
                         tools on the fly, and maintaining a 4.0 GPA in Computer Science alongside full-time engineering work.
@@ -44,7 +44,7 @@ export const ResumePage = () => {
 
                         </Text></li>
                         <li><Text>Engineered and integrated self-service authentication features including Google Single Sign-On (SSO) and secondary
-                            user management within a customer facing web application which streamlined subscriber onboarding and reduced
+                            user management within a customer-facing web application which streamlined subscriber onboarding and reduced
                             support ticket volume for credential recovery.
 
                         </Text></li>
