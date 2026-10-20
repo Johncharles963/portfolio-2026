@@ -1,12 +1,16 @@
-import { Link } from "react-router"
+import { NavLink } from "react-router"
 
 export const Navlinks = () => {
-    const links = [{text: "Home", url: "/"}, {text: "About", url: "/about"}, {text: "Resume", url: "/resume"}, {text: "Contact", url: "/contact"}]
+    const links = [{ text: "Home", url: "/" }, { text: "About", url: "/about" }, { text: "Resume", url: "/resume" }, { text: "Contact", url: "/contact" }]
     return(
-        <div className="flex gap-5">
-            {links.map((link, index) => (
-                <Link key={`nav-link-${link.text}`} to={link.url} className='btn'>{link.text}</Link>
-            ))}
-        </div>
+        <nav aria-label="Main navigation" className="max-sm:w-full">
+            <ul className="flex justify-between gap-2 sm:gap-5">
+                {links.map((link) => (
+                    <li key={link.text}>
+                        <NavLink to={link.url} end={link.url === "/"} className="btn">{link.text}</NavLink>
+                    </li>
+                ))}
+            </ul>
+        </nav>
     )
 }

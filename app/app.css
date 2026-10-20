@@ -59,3 +59,12 @@ body {
   outline: 3px solid #1d4ed8;
   outline-offset: 3px;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-slide-left,
+  .animate-slide-right {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

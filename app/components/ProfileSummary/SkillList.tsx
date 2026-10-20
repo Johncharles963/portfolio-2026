@@ -19,8 +19,8 @@ export const SkillList = () => {
         <div className="px-5 self-start">
             <ul className="list-disc">
                 {
-                    skills.map((skill, index )=> (
-                        <li key={`bullet-skill-list${index}`}><Text fontWeight="bold" className="inline">{skill.title}</Text><Text className="hidden sm:inline">{skill.description}</Text></li>
+                skills.map((skill) => (
+                    <li key={skill.title}><Text fontWeight="bold" className="inline">{skill.title}</Text><Text className="sr-only sm:not-sr-only sm:inline">{skill.description}</Text></li>
                     ))
                 }
             </ul>

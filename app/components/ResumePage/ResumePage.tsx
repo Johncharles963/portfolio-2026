@@ -4,7 +4,7 @@ import Text from "../Text/Text"
 
 export const ResumePage = () => {
     return (
-        <main className="flex flex-col gap-5 max-w-[1500px] justify-self-center p-5">
+        <div className="flex flex-col gap-5 max-w-[1500px] mx-auto p-5">
             <Text as="h1" size="xl2" fontWeight="bold">RESUME</Text>
             <section aria-labelledby="professional-summary-heading">
                 <Card>
@@ -78,6 +78,6 @@ export const ResumePage = () => {
                     </Text>
                 </Card>
             </section>
-        </main>
+        </div>
     )
 }

@@ -4,11 +4,12 @@ import { Link } from 'react-router'
 
 export const NavBar = () => {
     return (
-        <div className="flex justify-between px-5 py-2 w-full items-center bg-slate-900 text-slate-100">
-            <Link to="/">
-                <img src={Logo} alt="Logo" className='w-[200px] hidden sm:block cursor-pointer' />
+        <header className="flex flex-wrap justify-between gap-2 px-5 py-2 w-full items-center bg-slate-900 text-slate-100">
+            <Link to="/" aria-label="John Charles home" className="shrink-0">
+                <img src={Logo} alt="" aria-hidden="true" className="hidden w-[200px] sm:block" />
+                <span className="sm:hidden">John Charles</span>
             </Link>
             <Navlinks />
-        </div>
+        </header>
     )
 }

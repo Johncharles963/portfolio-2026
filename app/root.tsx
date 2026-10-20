@@ -69,7 +69,7 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
         {/* Include your tailwind/styles links here */}
       </head>
       <body className="bg-slate-50 flex items-center justify-center min-h-screen">
-        <div className="max-w-md w-full p-8 bg-white border border-slate-200 rounded-2xl shadow-sm text-center">
+        <main className="max-w-md w-full p-8 bg-white border border-slate-200 rounded-2xl shadow-sm text-center">
           
           {/* Status Code Badge */}
           <span className="inline-block px-3 py-1 mb-4 text-sm font-semibold text-red-600 bg-red-100 rounded-full">
@@ -88,7 +88,7 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
             Return Home
           </Link>
 
-        </div>
+        </main>
       </body>
     </html>
   );

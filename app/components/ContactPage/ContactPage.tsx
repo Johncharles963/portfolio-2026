@@ -126,17 +126,17 @@ export const ContactPage = () => {
                 </form>
 
                 <a className="flex items-center my-5 gap-3" href="mailto:johncharlesdev@gmail.com">
-                    <img className="h-10 w-10" src={EmailIcon} alt="Email" />
+                    <img className="h-10 w-10" src={EmailIcon} alt="" aria-hidden="true" />
                     <div>
                         <Text fontWeight="bold">EMAIL</Text>
                         <Text>johncharlesdev@gmail.com</Text>
                     </div>
                 </a>
                 <a href="https://www.linkedin.com/in/john-charles-dev/" target="_blank" rel="noreferrer" className="flex items-center gap-3">
-                    <img src={LinkedinIcon} className="h-10 w-10" alt="LinkedIn" />
+                    <img src={LinkedinIcon} className="h-10 w-10" alt="" aria-hidden="true" />
                     <div>
                         <Text fontWeight="bold">LINKEDIN</Text>
-                        <Text>https://www.linkedin.com/in/john-charles-dev/</Text>
+                        <Text>John Charles on LinkedIn (opens in a new tab)</Text>
                     </div>
                 </a>
             </Card>
